@@ -9,8 +9,14 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
    let bar_spacing = height / 10;
    let bar_height = width / 12;
    let bar_pos_x = width / 2;
- 
+   let barsize;
 // changes 
+
+
+barsize = map(drum, 100 , 200, 250, 600 )
+
+fill(255)
+rect(bar_pos_x, height / 2 + 2 * bar_spacing, barsize, bar_height);
    // vocal bar is red
    fill(200, 0, 0);
    rect(bar_pos_x, height / 2 + 1 * bar_spacing, 4 * vocal, bar_height);
@@ -18,10 +24,10 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
    text("vocals", bar_pos_x, height / 2 + 1 * bar_spacing + 8);
  
    // drum bar is green
-   fill(0, 200, 0);
-   rect(bar_pos_x, height / 2 + 2 * bar_spacing, 4 * drum, bar_height);
-   fill(0);
-   text("drums", bar_pos_x, height / 2 + 2 * bar_spacing + 8);
+  // fill(0, 200, 0);
+  // rect(bar_pos_x, height / 2 + 2 * bar_spacing, 4 * drum, bar_height);
+ //  fill(0);
+ //  text("drums", bar_pos_x, height / 2 + 2 * bar_spacing + 8);
  
    // bass bar is blue
    fill(50, 50, 240);
@@ -40,4 +46,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
    textAlign(CENTER);
    textSize(vocal);
    text(words, width/2, height/3);
+
+   //ive done it 
+   
 }
