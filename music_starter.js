@@ -6,11 +6,11 @@ let seconds = (counter / 60);
   // default background colour
   let r = 37, g = 34, b = 33;
 
-  // Change background colour during first chorus
+  // change background colour during first chorus
   if (seconds >= 41 && seconds <= 66) {
-    r = map(vocal, 0, 100, 10, r*2);
-    g = map(vocal, 0, 100, 10, g*2);
-    b = map(vocal, 0, 100, 10, b*2);
+    r = map(vocal, 0, 100, 10, r *2);
+    g = map(vocal, 0, 100, 10, g *2);
+    b = map(vocal, 0, 100, 10, b *2);
   }
   background(r, g, b);
   textFont('Verdana'); // please use CSS safe fonts
