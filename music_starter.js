@@ -60,9 +60,7 @@ if (seconds >= 121 && seconds <= 210) {
   }
 }
 
-  textFont('Verdana');
-  rectMode(CENTER);
-  textSize(24);
+
 
   // Map circle sizes 
   let csizeA = map(vocal, 0, 100, 50, 430);
@@ -101,15 +99,22 @@ if (seconds >= 121 && seconds <= 210) {
 
   pop();
 
-  // Display words 
-  fill(255);
-  textAlign(CENTER);
-  textSize(50);
-  text(words, centerX, centerY);
+//Text settings 
+textFont('Trebuchet MS');
+textAlign(CENTER);
+textSize(80);
+
+// shadow layer
+fill(0, 150);  
+text(words, centerX + 3, centerY + 3);
+
+// main text
+fill(255);
+text(words, centerX, centerY);
 }
 
 
-// === Circle drawing functions ===
+// Circle drawing functions 
 function DrawVocal(size) {
   noStroke();
   fill(249, 248, 245); ellipse(0, -320, size);
