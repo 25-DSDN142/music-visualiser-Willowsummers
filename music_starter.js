@@ -24,7 +24,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   }
   background(r, g, b);
 
-// === BRIDGE + FINAL CHORUS: bouncing balls (background, vocal + bass reactive) ===
+// BRIDGE + FINAL CHORUS: bouncing balls // This part of code was made with the help of AI
 if (seconds >= 121 && seconds <= 210) {
   if (!ballsInitialized) {
     for (let i = 0; i < 25; i++) {
@@ -59,7 +59,8 @@ if (seconds >= 121 && seconds <= 210) {
     ellipse(b.x, b.y, b.baseSize * pulse);
   }
 }
-
+// I only used AI to learn and generate the technical writing of the code
+// All of the maps and other variables are my inputs. 
 
 
   // Map circle sizes 
@@ -68,7 +69,7 @@ if (seconds >= 121 && seconds <= 210) {
   let csizeC = map(bass, 0, 100, 50, 430);
   let csizeD = map(other, 0, 100, 50, 430);
 
-  // === MAIN VISUALS (always drawn over bouncing balls) ===
+  // Main visuals 
   push();
   translate(centerX, centerY);
 
@@ -96,7 +97,7 @@ if (seconds >= 121 && seconds <= 210) {
       ellipse(-350, 0, csizeD + i * 30);   // Other
     }
   }
-
+  
   pop();
 
 //Text settings 
@@ -104,11 +105,11 @@ textFont('Trebuchet MS');
 textAlign(CENTER);
 textSize(80);
 
-// shadow layer
+//Shadow layer
 fill(0, 150);  
 text(words, centerX + 3, centerY + 3);
 
-// main text
+// Main text
 fill(255);
 text(words, centerX, centerY);
 }
